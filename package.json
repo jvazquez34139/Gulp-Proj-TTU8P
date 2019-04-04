@@ -1,0 +1,17 @@
+{
+  "name": "gulpproj",
+  "version": "1.0.0",
+  "description": "Prepares the project for production",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp",
+    "scss",
+    "concat",
+    "uglify"
+  ],
+  "author": "Jose Vazquez",
+  "license": "MIT"
+}
