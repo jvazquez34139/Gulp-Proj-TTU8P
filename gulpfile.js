@@ -38,37 +38,37 @@ gulp.task('compileSass', () => {
     .pipe(sass())
     .pipe(concat('all.css'))
     .pipe(maps.write('./'))
-    .pipe(dest('css'))
+    .pipe(dest('styles'))
 });
 
 gulp.task('minifyCSS', ['compileSass'], () => {
-  return src('css/all.css')
+  return src('styles/all.css')
     .pipe(cleanCss())
     .pipe(concat('all.min.css'))
-    .pipe(dest('css'));
+    .pipe(dest('styles'));
 });
 
 gulp.task('styles', ['minifyCSS'], () => {
-  return src(['css/all.css.map', 'css/all.min.css'])
+  return src(['styles/all.css.map', 'styles/all.min.css'])
     .pipe(dest('dist/styles'))
     .pipe(connect.reload());
 });
 
 gulp.task('images', () => {
-  src('images/*')
+  src('content/*')
     .pipe(imagemin())
     .pipe(dest('dist/content'));
 })
 
 gulp.task('clean', () => {
-  return del(['dist', 'css', 'js/all*.js*']);
+  return del(['dist', 'styles', 'js/all*.js*']);
 });
 
 
 gulp.task('build', ['clean'], () => {
 
   return (gulp.start(['scripts','styles','images']),
-    src('index.html')
+    src(['index.html', 'icons'])
       .pipe(dest('dist')));
 });
 
