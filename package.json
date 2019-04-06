@@ -13,5 +13,17 @@
     "uglify"
   ],
   "author": "Jose Vazquez",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^4.1.0",
+    "gulp": "^3.9.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {}
 }
